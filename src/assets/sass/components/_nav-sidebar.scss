@@ -1,0 +1,44 @@
+.left-sub-nav {
+    li {
+        margin-bottom: 5px;
+        white-space: nowrap;
+
+        a {
+            -webkit-tap-highlight-color: rgba(255,255,255,0);
+            @include border-radius(50px);
+            @include transition-duration(0.3s);
+            @include transition-property(all);
+            background-color: $color_black;
+            border: 2px solid $color_black;
+            color: $color_white;
+            cursor: pointer;
+            display: inline-block;
+            font-size: rem(14px); /* looks visually smaller */
+            font-weight: normal;
+            line-height: inherit;
+            overflow: hidden;
+            padding: rem(13px) rem(30px) rem(14px);
+            text-align: left;
+            text-overflow: ellipsis;
+            width: 100%;
+
+            &:hover {
+                @include transform(scale(1.02));
+                background-color: $color_white;
+                border: solid 2px $color_brand_primary;
+                color: $color_brand_primary;
+            }
+
+            &:active {
+                @include opacity(0.5);
+                @include transform(scale(1));
+            }
+
+            &.active {
+                background-color: $color_white;
+                border: solid 2px $color_brand_primary;
+                color: $color_brand_primary;
+            }
+        }
+    }
+}

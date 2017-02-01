@@ -1,0 +1,22 @@
+fieldset {
+    border: 0;
+}
+
+body, ul, li, fieldset {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+@include border-box-sizing;

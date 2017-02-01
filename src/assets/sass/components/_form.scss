@@ -1,0 +1,33 @@
+.select_wrap {
+    background-color: $color_input;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    &:before {
+        @extend %iconfont;
+        color: $color_black;
+        content: "\e901";
+        font-size: rem(20px);
+        margin-top: rem(-9px);
+        position: absolute;
+        right: rem(15px);
+        top: 50%;
+    }
+
+    select {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        @include appearance(none);
+        background-color: transparent;
+        background-image: none;
+        border: none;
+        cursor: pointer;
+        filter: alpha(opacity=0);
+        height: auto;
+        padding: rem(12px) rem(42px) rem(12px) rem(12px);
+        position: relative;
+        width: 100%;
+        z-index: 10;
+    }
+}
