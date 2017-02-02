@@ -1,0 +1,67 @@
+.product_listing_sort {
+    display: block;
+    float: left;
+    font-size: .875rem;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    &.listing_bottom {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+
+    &_field {
+        > div {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .select_wrap {
+        select {
+            padding: rem(7px) 2.625rem rem(7px) rem(5px);
+        }
+    }
+}
+
+.pgn {
+    justify-content: flex-end;
+
+    input {
+        padding: rem(5px);
+        width: rem(60px);
+    }
+
+    a {
+        color: $color_black;
+        padding: 0 2px;
+
+        span {
+            display: none;
+        }
+
+        &.i_prev,
+        &.i_next {
+            @include opacity(0.5);
+            background: url('../../assets/images/svg/wings-icon-black.svg') no-repeat;
+            display: block;
+            height: 2rem;
+            padding: 0 4px;
+            width: 2rem;
+
+            &:hover {
+                @include opacity(1);
+            }
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &.i_prev {
+            transform: scaleX(-1);
+            filter: FlipH;
+            -ms-filter: "FlipH";
+        }
+    }
+}

@@ -1,0 +1,89 @@
+/**
+* Merlin Skill Mobility - Helpers Styling Defaults
+*
+* Default helpers styling.
+*
+* @category    design
+* @package     merlin_bladerunner
+* @copyright   Copyright (c) 2016 Merlin Skill Mobility Pte Ltd
+*/
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix {
+    display: inline-block;
+    clear: both;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+    height: 1%;
+}
+.clearfix {
+    display: block;
+}
+/* close commented backslash hack */
+
+.text-center {
+    text-align: left;
+
+    @include breakpoint(min-width $desktop) {
+        text-align: center;
+    }
+}
+
+.text-right {
+    text-align: left;
+
+    @include breakpoint(min-width $desktop) {
+        text-align: right;
+    }
+}
+
+.text-left {
+    text-align: left;
+}
+
+a.disabled {
+   pointer-events: none;
+   cursor: default;
+}
+
+.margin_none {
+    margin-bottom: 0;
+}
+
+.margin_half {
+    margin-bottom: 1rem;
+}
+
+%iconfont {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'bladerunner' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

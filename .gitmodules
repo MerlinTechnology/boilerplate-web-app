@@ -1,0 +1,6 @@
+[submodule "uilib"]
+	path = uilib
+	url = git@github.com:MerlinTechnology/uilib.git
+[submodule "src/uilib"]
+	path = src/uilib
+	url = git@github.com:MerlinTechnology/uilib.git

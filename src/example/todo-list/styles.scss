@@ -1,0 +1,15 @@
+.container {
+    padding-top: 2rem;
+}
+
+.todo {
+    background-color: #ccc;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 2px;
+    padding: 1rem;
+
+    &:hover {
+        opacity: .8;
+    }
+}

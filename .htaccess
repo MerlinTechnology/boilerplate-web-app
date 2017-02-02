@@ -1,0 +1,8 @@
+# 1. this is the script used only for hosting using Apache
+# 2. this file will need to be copied into build folder during build
+RewriteEngine on
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]

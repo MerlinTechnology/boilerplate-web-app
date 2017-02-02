@@ -1,0 +1,90 @@
+/**
+ * Merlin Skill Mobility - Theme Style Configuraiton
+ *
+ * This file contains overrides for the default sass variables for the theme stylesheet.
+ *
+ * New theme specific variables can be added at the bottom of the file
+ *
+ * Uncomment the defaults below if you wish to change them
+ *
+ * @category    design
+ * @package     merlin_bladerunner
+ * @copyright   Copyright (c) 2016 Merlin Skill Mobility Pte Ltd
+ */
+
+// =============================================
+// Colors
+// =============================================
+
+/* Brand Colours */
+$color_brand_primary: #333333;
+
+/* Merlin Colours */
+$color_white: #FFFFFF;
+$color_black: #000000;
+$color_black_middle: #111111;
+$color_lightest_grey: #F4F4F4;
+
+$color_purple_light: #6673AC;
+$color_purple: #2F4285;
+$color_purple_middle: #5664A0;
+$color_purple_opacity_50: #969FC3;
+
+$color_blue: #007BB5;
+$color_bright_blue: #00B9D8;
+$color_bright_blue_light: #7BDCEC;
+$color_bright_blue_lighter: #CBF1F9;
+
+/* Font Colours */
+// $color_grey: #757575;
+$color_grey_dark: #444444;
+$color_grey: #767980;
+$color_grey_middle: #b3b3b3;
+$color_grey_light: #CCC;
+$color_grey_light2: #E5E5E5;
+$color_grey_light3: #EDEDED;
+$color_grey_lighter: #9FA5AA;
+$color_grey_lightest: #F7F7F7;
+
+/* Form Colours */
+$color_border: $color_black;
+$color_input: $color_lightest_grey;
+
+/* Link Colours */
+$color_primary_text_link: #00B9D8;
+$color_primary_text: #757575;
+$color_white_light: lighten($color_white, 50%);
+
+/* Message Colours */
+$color_success: #8DC11B;
+//$color_error: #FD483E;
+$color_error: #c05c5c;
+$color_warning: #F99500;
+
+
+// =============================================
+// Breakpoints
+// =============================================
+
+$widescreen: 1200px;
+$ipad_landscape: 1024px;
+$desktop: 768px;
+$tablet: 600px;
+
+// =============================================
+// Font Sizes
+// =============================================
+
+$font-size-smaller: rem(10px);
+$font-size-small: rem(12px);
+$font-size-regular: rem(15px);
+$font-size-medium: rem(18px);
+$font-size-large: rem(20px);
+$font-size-x-large:	rem(26px);
+$font-size-xx-large: rem(40px);
+$font-size-xxx-large: rem(64px);
+$font-size-xxxx-large: rem(96px);
+
+// ===========================================
+// Typography
+// ===========================================

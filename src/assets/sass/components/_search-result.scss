@@ -1,0 +1,40 @@
+.sort_up {
+    .i_up {
+        @include opacity(0.5);
+        @include transition(all .3s ease);
+        color: white;
+        left: 4px;
+        position: relative;
+        top: -4px;
+        vertical-align: middle;
+        width: rem(40px);
+        &:before {
+            content: "\e902";
+        }
+        &:hover, &.active {
+            @include opacity(1);
+        }
+    }
+}
+
+.sort_down {
+    .i_down {
+        @include opacity(0.5);
+        @include transition(all .3s ease);
+        color: white;
+        left: 4px;
+        position: relative;
+        top: -4px;
+        vertical-align: middle;
+        &:before {
+            content: "\e901";
+        }
+        &:hover, &.active {
+            @include opacity(1);
+        }
+    }
+}
+
+.sr-link {
+    border-bottom: dotted 1px #767980;
+}
