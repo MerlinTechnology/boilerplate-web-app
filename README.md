@@ -1,8 +1,9 @@
 # boilerplate-web-app
-Boilerplate for starting a new web app project.
+Boilerplate for starting a new react web app project.
  - [React](https://facebook.github.io/react/)/[Redux](http://redux.js.org/) with switch-free reducers & [reselect](https://github.com/reactjs/reselect)
  - [webpack](https://webpack.js.org)
  - [CSS modules](https://github.com/css-modules/css-modules)
+ - Testing with [Jest](https://facebook.github.io/jest/)
 
 ## Setup
 
