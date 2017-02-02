@@ -1,12 +1,8 @@
-import reducer from '../redux/reducers'
+import reducer, { initialState } from '../redux/reducers'
 import {
     EXAMPLE_COUNTER_DECREMENT,
     EXAMPLE_COUNTER_INCREMENT
 } from 'action-types'
-
-const initialState = {
-    value: 0
-}
 
 describe ('counter reducer', () => {
     it('returns the initial state', () => {

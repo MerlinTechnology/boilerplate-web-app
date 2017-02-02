@@ -293,7 +293,11 @@
     ],
     "moduleDirectories": [
       "node_modules"
-    ]
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss)$": "identity-obj-proxy"
+    }
   },
   "dependencies": {
     "amazon-cognito-identity-js": "^1.7.0",
@@ -339,6 +343,7 @@
     "react-test-renderer": "^15.4.2",
     "redux": "~3.6.0",
     "redux-logger": "^2.8.0",
+    "redux-mock-store": "^1.2.2",
     "redux-thunk": "^2.2.0",
     "reselect": "^2.5.4",
     "rimraf": "^2.5.4",

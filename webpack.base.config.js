@@ -1,11 +1,8 @@
-const path = require('path');
-const webpack = require('webpack');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const autoprefixer = require('autoprefixer')
-const precss = require('precss')
-const mqpacker = require('css-mqpacker')
+const path = require('path')
+const webpack = require('webpack')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
-require('es6-promise').polyfill();
+require('es6-promise').polyfill()
 
 module.exports = {
     entry: {
@@ -56,4 +53,4 @@ module.exports = {
             'node_modules'
         ]
     }
-};
+}

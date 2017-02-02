@@ -5,7 +5,7 @@ import {
     EXAMPLE_COUNTER_INCREMENT
 } from 'action-types'
 
-const initialState = {
+export const initialState = {
     value: 0
 }
 

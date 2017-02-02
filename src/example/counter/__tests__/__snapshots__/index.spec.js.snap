@@ -1,0 +1,27 @@
+exports[`test renders correctly 1`] = `
+<div
+  className="main-wrapper">
+  <div
+    className="main-container row">
+    <div
+      className="col">
+      <h1
+        className="h1">
+        Counter
+      </h1>
+      <span
+        className="span">
+        0
+      </span>
+      <button
+        onClick={[Function]}>
+        -
+      </button>
+      <button
+        onClick={[Function]}>
+        +
+      </button>
+    </div>
+  </div>
+</div>
+`;
