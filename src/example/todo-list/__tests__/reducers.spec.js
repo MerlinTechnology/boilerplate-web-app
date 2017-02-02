@@ -4,7 +4,7 @@ import {
     EXAMPLE_TODOS_TOGGLE
 } from 'action-types'
 
-describe ('todo-list reducer', () => {
+describe('todo-list reducer', () => {
     it('returns the initial state', () => {
 
         expect(

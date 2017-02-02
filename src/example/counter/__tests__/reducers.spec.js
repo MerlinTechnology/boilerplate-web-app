@@ -4,7 +4,7 @@ import {
     EXAMPLE_COUNTER_INCREMENT
 } from 'action-types'
 
-describe ('counter reducer', () => {
+describe('counter reducer', () => {
     it('returns the initial state', () => {
         expect(
             reducer(initialState, {})

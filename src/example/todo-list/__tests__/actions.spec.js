@@ -7,7 +7,7 @@ import {
     EXAMPLE_TODOS_TOGGLE
 } from 'action-types'
 
-describe ('todo-list actions', () => {
+describe('todo-list actions', () => {
     it('creates an action to add new todo', () => {
         const todos = []
         const todo = { text: 'new todo' }

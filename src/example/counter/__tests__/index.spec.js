@@ -11,11 +11,13 @@ import { initialState } from '../redux'
 const middleware = [thunk, routerMiddleware(browserHistory)]
 const mockStore = configureMockStore(middleware)
 
-it('renders correctly', () => {
-    const store = mockStore({ counter: initialState })
-    const component = renderer.create(
-        <Counter store={store}/>
-    )
+describe('Counter component', () => {
+    it('renders correctly', () => {
+        const store = mockStore({ counter: initialState })
+        const component = renderer.create(
+            <Counter store={store}/>
+        )
 
-    expect(component).toMatchSnapshot()
+        expect(component).toMatchSnapshot()
+    })
 })

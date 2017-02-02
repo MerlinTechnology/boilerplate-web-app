@@ -1,6 +1,6 @@
 import { counterValueSelector } from '../redux/selectors'
 
-describe ('counter value selector', () => {
+describe('counterValueSelector', () => {
     it('returns the counter value', () => {
         const value = Math.random()
 

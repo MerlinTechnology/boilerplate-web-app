@@ -11,11 +11,13 @@ import { initialState } from '../redux'
 const middleware = [thunk, routerMiddleware(browserHistory)]
 const mockStore = configureMockStore(middleware)
 
-it('renders correctly', () => {
-    const store = mockStore({ todoList: initialState })
-    const component = renderer.create(
-        <TodoListWrapper store={store}/>
-    )
+describe('TodoListWrapper', () => {
+    it('renders correctly', () => {
+        const store = mockStore({ todoList: initialState })
+        const component = renderer.create(
+            <TodoListWrapper store={store}/>
+        )
 
-    expect(component).toMatchSnapshot()
+        expect(component).toMatchSnapshot()
+    })
 })

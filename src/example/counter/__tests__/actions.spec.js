@@ -7,7 +7,7 @@ import {
     EXAMPLE_COUNTER_INCREMENT
 } from 'action-types'
 
-describe ('counter actions', () => {
+describe('counter actions', () => {
     it('create an action to increase counter value', () => {
         const expectedAction = { type: EXAMPLE_COUNTER_INCREMENT }
 

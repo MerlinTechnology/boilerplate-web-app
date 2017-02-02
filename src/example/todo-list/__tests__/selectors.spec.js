@@ -3,7 +3,7 @@ import {
     unfinishedTodosSelector
  } from '../redux/selectors'
 
-describe ('allTodosSelector', () => {
+describe('allTodosSelector', () => {
     it('returns all todos', () => {
         const todos = [ { text: 'todo1', id: 0, completed: false }, { text: 'todo2', id: 1, completed: true }]
         const state = { todoList: { todos }}
@@ -14,7 +14,7 @@ describe ('allTodosSelector', () => {
     })
 })
 
-describe ('unfinishedTodosSelector', () => {
+describe('unfinishedTodosSelector', () => {
     it('returns unfinished todos', () => {
         const todos = [ { text: 'todo1', id: 0, completed: false }, { text: 'todo2', id: 1, completed: true }]
         const state = { todoList: { todos }}

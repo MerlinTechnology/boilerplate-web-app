@@ -1,4 +1,4 @@
-exports[`test renders correctly 1`] = `
+exports[`Counter component renders correctly 1`] = `
 <div
   className="main-wrapper">
   <div
