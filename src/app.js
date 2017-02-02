@@ -5,11 +5,11 @@ import { Provider } from 'react-redux';
 import AWS from 'aws-sdk/global'
 import { syncHistoryWithStore } from 'react-router-redux'
 
+import 'assets/sass/main.global.scss'
+
 import ROUTE_ROOT from './route'
 import storeConfig from './store'
 import ENV_VARS from './uilib/env-vars'
-
-import 'assets/sass/main.global.scss'
 
 //default AWS setup
 AWS.config.update({

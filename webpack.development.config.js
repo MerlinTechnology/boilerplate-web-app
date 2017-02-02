@@ -4,18 +4,44 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const webpack = require('webpack')
 const baseConfig = require('./webpack.base.config')
 
-const loaders = {
-    loaders: []
-        .concat(baseConfig.module.loaders)
+const rules = {
+    rules: []
+        .concat(baseConfig.module.rules)
         .concat([
             {
                 test: /\.global\.scss$/,
-                loader: ExtractTextPlugin.extract('style-loader','css?importLoaders=1!postcss!sass'),
+                use: ExtractTextPlugin.extract({
+                    fallbackLoader: 'style-loader',
+                    loader: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                importLoaders: 1
+                            }
+                        },
+                        'postcss-loader',
+                        'sass-loader'
+                    ]
+                })
             },
             {
                 test: /\.scss$/,
-                loader: ExtractTextPlugin.extract('style-loader', 'css?modules&importLoaders=1&localIdentName=[path][name]__[local]___[hash:base64:5]!postcss!sass'),
-                exclude: /\.global\.scss/,
+                use: ExtractTextPlugin.extract({
+                    fallbackLoader: 'style-loader',
+                    loader: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                importLoaders: 1,
+                                modules: true,
+                                localIdentName: '[path][name]__[local]--[hash:base64:5]'
+                            }
+                        },
+                        'postcss-loader',
+                        'sass-loader'
+                    ]
+                }),
+                exclude: /\.global\.scss/
             }
         ])
 }
@@ -25,7 +51,7 @@ const config = {
 
     module: Object.assign({},
         baseConfig.module,
-        loaders
+        rules
     ),
 
     output: Object.assign({},
@@ -40,7 +66,7 @@ const config = {
     plugins: []
         .concat(baseConfig.plugins)
         .concat([
-            new ExtractTextPlugin('css/style.css', { allChunks: true }),
+            new ExtractTextPlugin({filename: 'css/style.css', allChunks: true }),
             new HtmlWebpackPlugin({
                 title: 'Bladerunner',
                 filename: path.join(__dirname, "build/index.html"),

@@ -16,6 +16,8 @@ const Counter = props => {
         counterIncrement
     } = props
 
+    console.warn(styles)
+
     return (
         <div className="main-wrapper">
             <div className="main-container row">

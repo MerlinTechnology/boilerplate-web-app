@@ -2,26 +2,38 @@ const webpack = require('webpack')
 const baseConfig = require('./webpack.base.config')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const loaders = {
-    loaders: []
-        .concat(baseConfig.module.loaders)
+const rules = {
+    rules: []
+        .concat(baseConfig.module.rules)
         .concat([
             {
                 test: /\.global\.scss/,
-                loaders: [
-                    'style',
-                    'css?importLoaders=1',
-                    'postcss',
-                    'sass'
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1
+                        }
+                    },
+                    'postcss-loader',
+                    'sass-loader'
                 ],
             },
             {
                 test: /\.scss$/,
-                loaders: [
-                    'style',
-                    'css?modules&importLoaders=1&localIdentName=[path][name]__[local]___[hash:base64:5]',
-                    'postcss',
-                    'sass'
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1,
+                            modules: true,
+                            localIdentName: '[path][name]__[local]--[hash:base64:5]'
+                        }
+                    },
+                    'postcss-loader',
+                    'sass-loader'
                 ],
                 exclude: /\.global\.scss/,
             }
@@ -48,7 +60,7 @@ const config = {
 
     module: Object.assign({},
         baseConfig.module,
-        loaders
+        rules
     ),
 
     output: Object.assign({},

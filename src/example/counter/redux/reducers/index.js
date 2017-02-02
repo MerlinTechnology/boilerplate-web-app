@@ -13,3 +13,5 @@ export const counterReducer = createReducer(initialState, {
     [EXAMPLE_COUNTER_DECREMENT]: require('./counter-decrement').default,
     [EXAMPLE_COUNTER_INCREMENT]: require('./counter-increment').default
 })
+
+export default counterReducer

@@ -2,7 +2,7 @@
 const ROUTE_404 = {
     path: '*',
     getComponent(nextState, cb) {
-        require.ensure([], (require) => {
+        require.ensure([], require => {
             cb(null, require('./page-not-found').default)
         })
     }
