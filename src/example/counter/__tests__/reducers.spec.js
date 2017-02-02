@@ -11,7 +11,7 @@ describe ('counter reducer', () => {
         ).toEqual(initialState)
     })
 
-    it('increase the counter value', () => {
+    it('increases the counter value', () => {
         expect(
             reducer(initialState, {
                 type: EXAMPLE_COUNTER_INCREMENT
@@ -19,7 +19,7 @@ describe ('counter reducer', () => {
         ).toEqual({value: 1})
     })
 
-    it('decrease the counter value', () => {
+    it('decreases the counter value', () => {
         expect(
             reducer(initialState, {
                 type: EXAMPLE_COUNTER_DECREMENT

@@ -1,0 +1,20 @@
+exports[`test renders correctly 1`] = `
+<div
+  className="main-wrapper">
+  <div
+    className="main-container row">
+    <div
+      className="col">
+      <div>
+        <input
+          autoFocus="true"
+          onKeyPress={[Function]}
+          placeholder="What to do?"
+          type="text" />
+      </div>
+      <ul
+        className="container" />
+    </div>
+  </div>
+</div>
+`;
