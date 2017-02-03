@@ -18,7 +18,7 @@
     "url": "git@github.com:MerlinTechnology/boilerplate-web-app.git"
   },
   "author": "Merlin Shift",
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MerlinTechnology/boilerplate-web-app/issues"
   },
@@ -327,7 +327,6 @@
     "identity-obj-proxy": "^3.0.0",
     "immutable": "~3.8.1",
     "jest": "^18.1.0",
-    "json-loader": "^0.5.4",
     "lodash": "^4.16.4",
     "node-sass": "^4.5.0",
     "postcss-loader": "^1.1.1",

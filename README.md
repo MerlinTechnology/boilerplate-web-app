@@ -30,3 +30,5 @@ Ensure your editor supports:
 | `yarn build:clean`    | delete `build` folder                            |
 | `yarn lint:js`        | run eslint through `src` folder, and display errors/warnings to stdout |
 | `yarn lint:js:fix`    | run eslint through `src` folder, and fix all auto-fixable problems |
+| `yarn test`           | run test |
+| `yarn test:watch`     | run test & watch |
