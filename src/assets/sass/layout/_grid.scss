@@ -4,6 +4,11 @@
     margin-right: auto;
     max-width: $widescreen;
     min-width: 20rem;
+    width: 100%;
+
+    &.padded {
+        padding: 1rem;
+    }
 
     .col {
         flex-basis: 100%;
