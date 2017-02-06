@@ -11,8 +11,8 @@ const rules = {
             {
                 test: /\.global\.scss$/,
                 use: ExtractTextPlugin.extract({
-                    fallbackLoader: 'style-loader',
-                    loader: [
+                    fallback: 'style-loader',
+                    use: [
                         {
                             loader: 'css-loader',
                             options: {
@@ -27,8 +27,8 @@ const rules = {
             {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
-                    fallbackLoader: 'style-loader',
-                    loader: [
+                    fallback: 'style-loader',
+                    use: [
                         {
                             loader: 'css-loader',
                             options: {
