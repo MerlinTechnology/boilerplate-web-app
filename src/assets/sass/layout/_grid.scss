@@ -3,11 +3,39 @@
     margin-left: auto;
     margin-right: auto;
     max-width: $widescreen;
-    min-width: 20rem;
+    min-width: 1rem;
     width: 100%;
 
     &.padded {
         padding: 1rem;
+    }
+
+    &.justify {
+        &-center {
+            justify-content: center;
+        }
+
+        &-start {
+            justify-content: flex-start;
+        }
+
+        &-end {
+            justify-content: flex-end;
+        }
+    }
+
+    &.align {
+        &-center {
+            align-items: center;
+        }
+
+        &-start {
+            align-items: flex-start;
+        }
+
+        &-end {
+            align-items: flex-end;
+        }
     }
 
     .col {
