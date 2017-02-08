@@ -6,8 +6,22 @@
     min-width: 1rem;
     width: 100%;
 
+    &.flex-all {
+        display: flex;
+    }
+
     &.padded {
         padding: 1rem;
+
+        &-vertical {
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+        }
+
+        &-horizontal {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
     }
 
     &.justify {
@@ -45,7 +59,10 @@
     @include breakpoint(min-width $desktop) {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+
+        &:not(.no-wrap) {
+            flex-wrap: wrap;
+        }
 
         .col, ._1 {
             flex: 1;
