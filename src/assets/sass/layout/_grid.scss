@@ -12,44 +12,34 @@
 
     &.padded {
         padding: 1rem;
-
-        &-vertical {
-            padding-bottom: 1rem;
-            padding-top: 1rem;
-        }
-
-        &-horizontal {
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
+    }
+    &.padded-vertical {
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+    &.padded-horizontal {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
-    &.justify {
-        &-center {
-            justify-content: center;
-        }
-
-        &-start {
-            justify-content: flex-start;
-        }
-
-        &-end {
-            justify-content: flex-end;
-        }
+    &.justify-center {
+        justify-content: center;
+    }
+    &.justify-start {
+        justify-content: flex-start;
+    }
+    &.justify-end {
+        justify-content: flex-end;
     }
 
-    &.align {
-        &-center {
-            align-items: center;
-        }
-
-        &-start {
-            align-items: flex-start;
-        }
-
-        &-end {
-            align-items: flex-end;
-        }
+    &.align-center {
+        align-items: center;
+    }
+    &.align-start {
+        align-items: flex-start;
+    }
+    &.align-end {
+        align-items: flex-end;
     }
 
     .col {
