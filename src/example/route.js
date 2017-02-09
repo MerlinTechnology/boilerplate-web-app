@@ -1,28 +1,27 @@
 const ROUTE_EXAMPLE = {
     path: 'example',
-    getIndexRoute(partialNextState, callback) {
-        require.ensure([], require =>
-            callback(null, {
-                component: require('./example-list').default,
-            })
-        )
-    },
+    getIndexRoute:
+        (partialNextState, cb) =>
+            import('./example-list')
+                .then(module => cb(null, { component: module.default }))
+                .catch(err => console.log(err))
+    ,
     childRoutes: [
         {
             path: 'counter',
-            getComponent(nextState, cb) {
-                return require.ensure([], require => {
-                    cb(null, require('./counter').default)
-                })
-            }
+            getComponents:
+                (nextState, cb) =>
+                    import('./counter')
+                        .then(module => cb(null, module.default))
+                        .catch(err => console.log(err))
         },
         {
             path: 'todo-list',
-            getComponent(nextState, cb) {
-                return require.ensure([], require => {
-                    cb(null, require('./todo-list').default)
-                })
-            }
+            getComponents:
+                (nextState, cb) =>
+                    import('./todo-list')
+                        .then(module => cb(null, module.default))
+                        .catch(err => console.log(err))
         }
     ]
 }

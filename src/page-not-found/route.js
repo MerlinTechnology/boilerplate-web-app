@@ -1,11 +1,11 @@
 
 const ROUTE_404 = {
     path: '*',
-    getComponent(nextState, cb) {
-        require.ensure([], require => {
-            cb(null, require('./page-not-found').default)
-        })
-    }
+    getComponents:
+        (nextState, cb) =>
+            import('./page-not-found')
+                .then(module => cb(null, module.default))
+                .catch(err => console.log(err))
 }
 
 export default ROUTE_404

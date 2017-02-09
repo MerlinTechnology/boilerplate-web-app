@@ -47,25 +47,9 @@ const config = {
 
     devtool: 'cheap-module-eval-source-map',
 
-    entry: Object.assign({},
-        baseConfig.entry,
-        {
-            app: [
-                'webpack-dev-server/client?http://0.0.0.0:9090/',
-                'webpack/hot/only-dev-server',
-                baseConfig.entry.app
-            ]
-        }
-    ),
-
     module: Object.assign({},
         baseConfig.module,
         rules
-    ),
-
-    output: Object.assign({},
-        baseConfig.output,
-        { publicPath: '/' }
     ),
 
     plugins: []

@@ -1,6 +1,6 @@
 # boilerplate-web-app
 Boilerplate for starting a new react web app project.
- - [React](https://facebook.github.io/react/)/[Redux](http://redux.js.org/) with switch-free reducers & [reselect](https://github.com/reactjs/reselect)
+ - [React](https://facebook.github.io/react/)/[Redux](http://redux.js.org/) with [reselect](https://github.com/reactjs/reselect)
  - [webpack](https://webpack.js.org)
  - [CSS modules](https://github.com/css-modules/css-modules)
  - Testing with [Jest](https://facebook.github.io/jest/)
@@ -22,13 +22,14 @@ Ensure your editor supports:
 
 ## Scripts
 
-| Command               | Purpose                                          |
-|:----------------------|:-------------------------------------------------|
-| `yarn build-dev`      | `webpack` build for development                  |
-| `yarn build-prod`     | `webpack` build for production                   |
-| `yarn start`          | compile the app then serve content (via [http://localhost:9090](http://localhost:9090) by default) with Hot Module Reload |
-| `yarn build:clean`    | delete `build` folder                            |
-| `yarn lint:js`        | run eslint through `src` folder, and display errors/warnings to stdout |
-| `yarn lint:js:fix`    | run eslint through `src` folder, and fix all auto-fixable problems |
-| `yarn test`           | run test |
-| `yarn test:watch`     | run test & watch |
+| Command            | Purpose                                                                                            |
+|--------------------|----------------------------------------------------------------------------------------------------|
+| `yarn start`       | compile the app then serve content (via [http://localhost:9090](http://localhost:9090) by default) |
+| `yarn build`       | `webpack` build for development                                                                    |
+| `yarn build:prod`  | `webpack` build for production                                                                     |
+| `yarn build:clean` | delete `build` folder                                                                              |
+| `yarn lint:js`     | run eslint through `src` folder, and display errors/warnings to stdout                             |
+| `yarn lint:js:fix` | run eslint through `src` folder, and fix all auto-fixable problems                                 |
+| `yarn test`        | run test                                                                                           |
+| `yarn test:watch`  | run test & watch                                                                                   |
+
