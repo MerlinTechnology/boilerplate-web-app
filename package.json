@@ -4,8 +4,8 @@
   "description": "Boilerplate for react webapp",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
+    "test": "NODE_ENV=test jest",
+    "test:watch": "NODE_ENV=test jest --watch",
     "build": "npm run build:clean && webpack --progress --colors --config webpack.development.config.js",
     "build:prod": "npm run build:clean && webpack --progress --colors --config webpack.production.config.js -p",
     "start": "npm run build:clean && webpack-dev-server --config webpack.server.config.js --port 9090 --colors --hot --inline",
