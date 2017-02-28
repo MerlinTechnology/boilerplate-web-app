@@ -4,8 +4,7 @@ const ROUTE_EXAMPLE = {
         (partialNextState, cb) =>
             import('./example-list')
                 .then(module => cb(null, { component: module.default }))
-                .catch(err => console.log(err))
-    ,
+                .catch(err => console.log(err)),
     childRoutes: [
         {
             path: 'counter',

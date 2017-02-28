@@ -5,12 +5,11 @@ import { browserHistory } from 'react-router'
 import reducers from './reducers'
 import appHelper from './uilib/utils/app-helper'
 
-
-//production middleware,
-//put them here
+// production middleware,
+// put them here
 let middleware = [thunk, routerMiddleware(browserHistory)]
 
-//developement environment middleware
+// developement environment middleware
 if (appHelper.ifDebug()) {
     let config = require('./uilib/env-vars')
     let createLogger = require('redux-logger')
@@ -18,7 +17,7 @@ if (appHelper.ifDebug()) {
     middleware = [...middleware, logger]
 }
 
-const composeEnhancers = appHelper.ifDebug() ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose : compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const storeConfig = preloadedState => createStore(
     reducers,

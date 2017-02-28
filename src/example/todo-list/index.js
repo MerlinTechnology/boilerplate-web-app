@@ -10,6 +10,13 @@ import {
     unfinishedTodosSelector
 } from './redux'
 
+const propTypes = {
+    addNewTodo: PropTypes.func.isRequired,
+    todos: PropTypes.any,
+    toggleTodo: PropTypes.func.isRequired,
+    unfinishedTodos: PropTypes.any
+}
+
 const TodoListWrapper = props => {
     const {
         addNewTodo,
@@ -30,19 +37,15 @@ const TodoListWrapper = props => {
     )
 }
 
-TodoListWrapper.propTypes = {
-    addNewTodo: PropTypes.func.isRequired,
-    todos: PropTypes.any,
-    toggleTodo: PropTypes.func.isRequired
-}
+TodoListWrapper.propTypes = propTypes
 
 const mapStateToProps = state => ({
     todos: allTodosSelector(state),
     unfinishedTodos: unfinishedTodosSelector(state)
 })
 
-const mapDispatchToProps = dispatch =>({
-    addNewTodo: ({ todos, text }) => dispatch(addNewTodo({ todos, todo: {text, completed: false}})),
+const mapDispatchToProps = dispatch => ({
+    addNewTodo: ({ todos, text }) => dispatch(addNewTodo({ todos, todo: { text, completed: false } })),
     toggleTodo: ({ todos, id }) => dispatch(toggleTodo({ todos, id }))
 })
 

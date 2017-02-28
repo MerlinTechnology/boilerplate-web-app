@@ -6,12 +6,10 @@ import {
 
 describe('todo-list reducer', () => {
     it('returns the initial state', () => {
-
         expect(
             reducer(initialState, {})
         ).toEqual(initialState)
     })
-
 
     it('adds new todo', () => {
         const todo = { text: 'new todo', id: 0, completed: false }

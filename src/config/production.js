@@ -1,6 +1,6 @@
 
 export const ENV = {
-    //default setting
+    // default setting
     DEFAULT_AWS_CONFIG: {
         apiVersions: {
             s3: 'latest'
@@ -8,7 +8,7 @@ export const ENV = {
         region: 'ap-southeast-2'
     },
 
-    //cognito
+    // cognito
     COGNITO_REGION: 'COGNITO_REGION',
     COGNITO_USER_POOL_ID: '',
     COGNITO_APP_CLIENT_ID: '',
@@ -18,7 +18,7 @@ export const ENV = {
         'email',
         'family_name',
         'given_name',
-        'password',
+        'password'
     ],
 
     COGNITO_USER_POOL_STANDARD_ATTR: [
@@ -72,6 +72,4 @@ export const ENV = {
         diff: true
     }
 }
-
-
 

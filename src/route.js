@@ -16,14 +16,12 @@ const ROUTE_ROOT = {
         (nextState, cb) =>
             import('./main-app')
                 .then(module => cb(null, module.default))
-                .catch(err => console.log(err))
-    ,
+                .catch(err => console.log(err)),
     getIndexRoute:
         (partialNextState, cb) =>
             import('./dashboard')
                 .then(module => cb(null, { component: module.default }))
-                .catch(err => console.log(err))
-    ,
+                .catch(err => console.log(err)),
     childRoutes: [
         ROUTE_TANDC,
         ROUTE_EXAMPLE,

@@ -15,7 +15,7 @@ describe('TodoListWrapper', () => {
     it('renders correctly', () => {
         const store = mockStore({ todoList: initialState })
         const component = renderer.create(
-            <TodoListWrapper store={store}/>
+            <TodoListWrapper store={store} />
         )
 
         expect(component).toMatchSnapshot()

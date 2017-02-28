@@ -17,9 +17,9 @@ const Counter = props => {
     } = props
 
     return (
-        <div className="main-wrapper">
-            <div className="main-container row">
-                <div className="col">
+        <div className='main-wrapper'>
+            <div className='main-container row'>
+                <div className='col'>
                     <h1 className={styles.h1}>{'Counter'}</h1>
                     <span className={styles.span}>{counter}</span>
                     <button onClick={counterDecrement}>{'-'}</button>
