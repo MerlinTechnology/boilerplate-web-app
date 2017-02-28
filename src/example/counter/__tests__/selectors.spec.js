@@ -5,7 +5,7 @@ describe('counterValueSelector', () => {
         const value = Math.random()
 
         expect(
-            counterValueSelector({ counter: { value }})
+            counterValueSelector({ counter: { value } })
         ).toEqual(value)
     })
 })

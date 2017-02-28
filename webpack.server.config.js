@@ -18,7 +18,7 @@ const rules = {
                     },
                     'postcss-loader',
                     'sass-loader'
-                ],
+                ]
             },
             {
                 test: /\.scss$/,
@@ -35,7 +35,7 @@ const rules = {
                     'postcss-loader',
                     'sass-loader'
                 ],
-                exclude: /\.global\.scss/,
+                exclude: /\.global\.scss/
             }
         ])
 }
@@ -60,10 +60,10 @@ const config = {
                 'process.env.DEBUG': JSON.stringify('true')
             }),
             new HtmlWebpackPlugin({
-                title: 'Bladerunner',
+                title: 'Merlin',
                 template: 'src/index.ejs',
                 hash: true
-            }),
+            })
         ])
 }
 

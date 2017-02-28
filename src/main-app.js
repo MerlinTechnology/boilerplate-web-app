@@ -1,5 +1,9 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
+
+const propTypes = {
+    children: PropTypes.any
+}
 
 const App = props =>
     <div>
@@ -15,5 +19,7 @@ const App = props =>
 
         {props.children}
     </div>
+
+App.propTypes = propTypes
 
 export default App

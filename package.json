@@ -4,14 +4,14 @@
   "description": "Boilerplate for react webapp",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
+    "test": "NODE_ENV=test jest",
+    "test:watch": "NODE_ENV=test jest --watch",
     "build": "npm run build:clean && webpack --progress --colors --config webpack.development.config.js",
     "build:prod": "npm run build:clean && webpack --progress --colors --config webpack.production.config.js -p",
-    "start": "npm run build:clean && webpack-dev-server --config webpack.server.config.js --port 9090 --colors --hot --inline",
+    "start": "npm run build:clean && webpack-dev-server --config webpack.server.config.js --port 9090 --colors --hot --inline --progress",
     "build:clean": "./node_modules/rimraf/bin.js build",
     "lint:js": "eslint src",
-    "lint:js:fix": "npm run lint:js -- --fix"
+    "lint:js:fix": "eslint src --fix"
   },
   "repository": {
     "type": "git",
@@ -24,11 +24,6 @@
   },
   "eslintConfig": {
     "parser": "babel-eslint",
-    "plugins": [
-      "import",
-      "jsx-a11y",
-      "react"
-    ],
     "env": {
       "browser": true,
       "commonjs": true,
@@ -61,216 +56,20 @@
         }
       }
     },
+    "extends": [
+      "standard",
+      "standard-react"
+    ],
     "rules": {
       "indent": [
-        "warn",
+        "error",
         4,
         {
           "SwitchCase": 1
         }
       ],
-      "array-callback-return": "warn",
-      "default-case": [
-        "warn",
-        {
-          "commentPattern": "^no default$"
-        }
-      ],
-      "dot-location": [
-        "warn",
-        "property"
-      ],
-      "eqeqeq": [
-        "warn",
-        "allow-null"
-      ],
-      "guard-for-in": "warn",
-      "new-parens": "warn",
-      "no-array-constructor": "warn",
-      "no-caller": "warn",
-      "no-cond-assign": [
-        "warn",
-        "always"
-      ],
-      "no-const-assign": "warn",
-      "no-control-regex": "warn",
-      "no-delete-var": "warn",
-      "no-dupe-args": "warn",
-      "no-dupe-class-members": "warn",
-      "no-dupe-keys": "warn",
-      "no-duplicate-case": "warn",
-      "no-empty-character-class": "warn",
-      "no-empty-pattern": "warn",
-      "no-eval": "warn",
-      "no-ex-assign": "warn",
-      "no-extend-native": "warn",
-      "no-extra-bind": "warn",
-      "no-extra-label": "warn",
-      "no-fallthrough": "warn",
-      "no-func-assign": "warn",
-      "no-implied-eval": "warn",
-      "no-invalid-regexp": "warn",
-      "no-iterator": "warn",
-      "no-label-var": "warn",
-      "no-labels": [
-        "warn",
-        {
-          "allowLoop": false,
-          "allowSwitch": false
-        }
-      ],
-      "no-lone-blocks": "warn",
-      "no-loop-func": "warn",
-      "no-mixed-operators": [
-        "warn",
-        {
-          "groups": [
-            [
-              "&",
-              "|",
-              "^",
-              "~",
-              "<<",
-              ">>",
-              ">>>"
-            ],
-            [
-              "==",
-              "!=",
-              "===",
-              "!==",
-              ">",
-              ">=",
-              "<",
-              "<="
-            ],
-            [
-              "&&",
-              "||"
-            ],
-            [
-              "in",
-              "instanceof"
-            ]
-          ],
-          "allowSamePrecedence": false
-        }
-      ],
-      "no-multi-str": "warn",
-      "no-native-reassign": "warn",
-      "no-negated-in-lhs": "warn",
-      "no-new-func": "warn",
-      "no-new-object": "warn",
-      "no-new-symbol": "warn",
-      "no-new-wrappers": "warn",
-      "no-obj-calls": "warn",
-      "no-octal": "warn",
-      "no-octal-escape": "warn",
-      "no-redeclare": "warn",
-      "no-regex-spaces": "warn",
-      "no-restricted-syntax": [
-        "warn",
-        "LabeledStatement",
-        "WithStatement"
-      ],
-      "no-script-url": "warn",
-      "no-self-assign": "warn",
-      "no-self-compare": "warn",
-      "no-sequences": "warn",
-      "no-shadow-restricted-names": "warn",
-      "no-sparse-arrays": "warn",
-      "no-template-curly-in-string": "warn",
-      "no-this-before-super": "warn",
-      "no-throw-literal": "warn",
-      "no-undef": "error",
-      "no-unexpected-multiline": "warn",
-      "no-unreachable": "warn",
-      "no-unused-expressions": [
-        "warn",
-        {
-          "allowShortCircuit": true,
-          "allowTernary": true
-        }
-      ],
-      "no-unused-labels": "warn",
-      "no-unused-vars": [
-        "warn",
-        {
-          "vars": "local",
-          "varsIgnorePattern": "^_",
-          "args": "none"
-        }
-      ],
-      "no-use-before-define": [
-        "warn",
-        "nofunc"
-      ],
-      "no-useless-computed-key": "warn",
-      "no-useless-concat": "warn",
-      "no-useless-constructor": "warn",
-      "no-useless-escape": "warn",
-      "no-useless-rename": [
-        "warn",
-        {
-          "ignoreDestructuring": false,
-          "ignoreImport": false,
-          "ignoreExport": false
-        }
-      ],
-      "no-with": "warn",
-      "no-whitespace-before-property": "warn",
-      "operator-assignment": [
-        "warn",
-        "always"
-      ],
-      "radix": "warn",
-      "require-yield": "warn",
-      "rest-spread-spacing": [
-        "warn",
-        "never"
-      ],
-      "strict": [
-        "warn",
-        "never"
-      ],
-      "unicode-bom": [
-        "warn",
-        "never"
-      ],
-      "use-isnan": "warn",
-      "valid-typeof": "warn",
-      "import/no-webpack-loader-syntax": "error",
-      "react/jsx-equals-spacing": [
-        "warn",
-        "never"
-      ],
-      "react/jsx-no-duplicate-props": [
-        "warn",
-        {
-          "ignoreCase": true
-        }
-      ],
-      "react/jsx-no-undef": "error",
-      "react/jsx-pascal-case": [
-        "warn",
-        {
-          "allowAllCaps": true,
-          "ignore": []
-        }
-      ],
-      "react/jsx-uses-react": "warn",
-      "react/jsx-uses-vars": "warn",
-      "react/no-danger-with-children": "warn",
-      "react/no-deprecated": "warn",
-      "react/no-direct-mutation-state": "warn",
-      "react/no-is-mounted": "warn",
-      "react/react-in-jsx-scope": "error",
-      "react/require-render-return": "warn",
-      "react/style-prop-object": "warn",
-      "jsx-a11y/aria-role": "warn",
-      "jsx-a11y/img-has-alt": "warn",
-      "jsx-a11y/img-redundant-alt": "warn",
-      "jsx-a11y/no-access-key": "warn"
+      "react/jsx-indent": ["error", 4],
+      "react/jsx-indent-props": ["error", 4]
     }
   },
   "babel": {
@@ -301,7 +100,7 @@
   },
   "dependencies": {
     "amazon-cognito-identity-js": "^1.7.0",
-    "aws-sdk": "^2.6.12",
+    "aws-sdk": "^2.22.0",
     "breakpoint-sass": "^2.7.0",
     "compass-mixins": "^0.12.10",
     "es6-promise": "^4.0.5",
@@ -312,9 +111,9 @@
     "rc-collapse": "^1.6.11",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-redux": "^5.0.2",
+    "react-redux": "^5.0.3",
     "react-router": "2",
-    "react-router-redux": "^4.0.7",
+    "react-router-redux": "^4.0.8",
     "redux": "~3.6.0",
     "redux-logger": "^2.8.0",
     "redux-thunk": "^2.2.0",
@@ -324,36 +123,38 @@
     "whatwg-fetch": "^2.0.1"
   },
   "devDependencies": {
-    "autoprefixer": "^6.5.4",
-    "babel-cli": "^6.22.2",
-    "babel-core": "^6.22.1",
+    "autoprefixer": "^6.7.5",
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
     "babel-eslint": "^7.1.1",
-    "babel-jest": "^18.0.0",
-    "babel-loader": "^6.2.4",
+    "babel-jest": "^19.0.0",
+    "babel-loader": "^6.3.2",
     "babel-preset-es2015": "^6.22.0",
-    "babel-preset-react": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.5.0",
     "copy-webpack-plugin": "^4.0.1",
-    "css-loader": "^0.26.1",
+    "css-loader": "^0.26.2",
     "css-mqpacker": "^5.0.1",
-    "eslint": "^3.11.1",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.8.0",
-    "extract-text-webpack-plugin": "beta",
-    "file-loader": "^0.10.0",
+    "eslint": "^3.16.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-config-standard-react": "^4.2.0",
+    "eslint-plugin-promise": "^3.4.2",
+    "eslint-plugin-react": "^6.10.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "extract-text-webpack-plugin": "^2.0.0",
+    "file-loader": "^0.10.1",
     "html-webpack-plugin": "^2.21.0",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^18.1.0",
-    "postcss-loader": "^1.1.1",
+    "jest": "^19.0.2",
+    "postcss-loader": "^1.3.2",
     "precss": "^1.4.0",
     "react-hot-loader": "^1.3.1",
     "react-test-renderer": "^15.4.2",
     "redux-mock-store": "^1.2.2",
-    "rimraf": "^2.5.4",
-    "sass-loader": "^4.1.1",
-    "style-loader": "^0.13.1",
+    "rimraf": "^2.6.1",
+    "sass-loader": "^6.0.2",
+    "style-loader": "^0.13.2",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "1"
+    "webpack-dev-server": "^2.4.1"
   }
 }

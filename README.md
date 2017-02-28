@@ -4,6 +4,7 @@ Boilerplate for starting a new react web app project.
  - [webpack](https://webpack.js.org)
  - [CSS modules](https://github.com/css-modules/css-modules)
  - Testing with [Jest](https://facebook.github.io/jest/)
+ - [standard] javascript rules (with 4 spaces indentation instead of 2)
 
 ## Setup
 
@@ -18,7 +19,7 @@ Boilerplate for starting a new react web app project.
 Ensure your editor supports:
 - [EditorConfig](http://editorconfig.org/#download).
 - Live linting
-  - [ESLint](http://eslint.org/docs/user-guide/integrations#editors) plugin installed and enabled for linting JS - currently using rules from Facebook's [create-react-app](https://github.com/facebookincubator/create-react-app) without `flow-type` plugin.
+  - [ESLint](http://eslint.org/docs/user-guide/integrations#editors) plugin installed and enabled for linting JS - currently using [standard](https://github.com/feross/standard).
 
 ## Scripts
 

@@ -15,7 +15,7 @@ describe('Counter component', () => {
     it('renders correctly', () => {
         const store = mockStore({ counter: initialState })
         const component = renderer.create(
-            <Counter store={store}/>
+            <Counter store={store} />
         )
 
         expect(component).toMatchSnapshot()

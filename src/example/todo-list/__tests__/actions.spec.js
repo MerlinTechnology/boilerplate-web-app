@@ -14,7 +14,7 @@ describe('todo-list actions', () => {
         const expectedAction = {
             type: EXAMPLE_TODOS_ADD_NEW,
             todos,
-            todo: { text: 'new todo', id: 0, completed: false}
+            todo: { text: 'new todo', id: 0, completed: false }
         }
 
         expect(
@@ -23,7 +23,7 @@ describe('todo-list actions', () => {
     })
 
     it('creates an action to toggle a todo state', () => {
-        const todos = [{ text: 'todo 1', id: 0, completed: false}]
+        const todos = [{ text: 'todo 1', id: 0, completed: false }]
         const id = 0
         const expectedAction = {
             type: EXAMPLE_TODOS_TOGGLE,

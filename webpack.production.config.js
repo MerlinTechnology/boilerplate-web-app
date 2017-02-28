@@ -57,9 +57,9 @@ const config = {
     output: Object.assign({},
         baseConfig.output,
         {
-            path: path.join(__dirname, "build/assets"),
-            publicPath: "/assets/",
-            filename: "bundle.js",
+            path: path.join(__dirname, 'build/assets'),
+            publicPath: '/assets/',
+            filename: 'bundle.js'
         }
     ),
 
@@ -67,9 +67,9 @@ const config = {
         .concat(baseConfig.plugins)
         .concat([
             new webpack.DefinePlugin({
-                'process.env.NODE_ENV': JSON.stringify("production")
+                'process.env.NODE_ENV': JSON.stringify('production')
             }),
-            new ExtractTextPlugin({filename: 'css/style.css', allChunks: true }),
+            new ExtractTextPlugin({ filename: 'css/style.css', allChunks: true }),
             new webpack.optimize.UglifyJsPlugin({
                 compress: {
                     warnings: false
@@ -77,11 +77,11 @@ const config = {
                 sourceMap: true
             }),
             new HtmlWebpackPlugin({
-                title: 'Bladerunner',
-                filename: path.join(__dirname, "build/index.html"),
+                title: 'Merlin',
+                filename: path.join(__dirname, 'build/index.html'),
                 template: 'src/index.ejs',
                 hash: true
-            }),
+            })
         ])
 }
 
