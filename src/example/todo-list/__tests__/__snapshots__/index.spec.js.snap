@@ -1,19 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`TodoListWrapper renders correctly 1`] = `
 <div
-  className="main-wrapper">
+  className="main-wrapper"
+>
   <div
-    className="main-container row">
+    className="main-container row"
+  >
     <div
-      className="col">
+      className="col"
+    >
       <div>
         <input
           autoFocus="true"
           onKeyPress={[Function]}
           placeholder="What to do?"
-          type="text" />
+          type="text"
+        />
       </div>
       <ul
-        className="container" />
+        className="container"
+      />
     </div>
   </div>
 </div>

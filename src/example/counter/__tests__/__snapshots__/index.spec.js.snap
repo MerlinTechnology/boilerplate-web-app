@@ -1,24 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Counter component renders correctly 1`] = `
 <div
-  className="main-wrapper">
+  className="main-wrapper"
+>
   <div
-    className="main-container row">
+    className="main-container row"
+  >
     <div
-      className="col">
+      className="col"
+    >
       <h1
-        className="h1">
+        className="h1"
+      >
         Counter
       </h1>
       <span
-        className="span">
+        className="span"
+      >
         0
       </span>
       <button
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         -
       </button>
       <button
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         +
       </button>
     </div>
